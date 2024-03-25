@@ -7,10 +7,10 @@ courses: { compsci: {week: 26} }
 type: hacks
 ---
 
-
+ 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Titanic Survival Prediction</title>
@@ -75,7 +75,7 @@ type: hacks
             display: none; /* initially hide */
             color: #333333; /* Dark gray text */
         }
-    </style>
+    </style> 
 </head>
 <body>
     <div class="container">
@@ -112,10 +112,10 @@ type: hacks
         </form>
         <div id="predictionResult"></div>
     </div>
-    <script>
+    <script> // js that handles int w api and the form submisson
         document.getElementById('predictionForm').onsubmit = async function(e) {
             e.preventDefault();
-            const formData = {
+            const formData = { // extract form data
                 pclass: document.getElementById('pclass').value,
                 sex: document.getElementById('sex').value,
                 age: document.getElementById('age').value,
@@ -124,7 +124,7 @@ type: hacks
                 fare: document.getElementById('fare').value,
                 alone: document.getElementById('alone').checked ? 1 : 0,
                 embarked: document.getElementById('embarked').value
-            };
+            }; // send data to api to get prediction
             const response = await fetch('http://127.0.0.1:8086/api/titanic/predict', {
                 method: 'POST',
                 headers: {
@@ -132,10 +132,9 @@ type: hacks
                 },
                 body: JSON.stringify(formData),
             });
-            const result = await response.json();
-            const resultDiv = document.getElementById('predictionResult');
+            const result = await response.json(); // get prediction from api
+            const resultDiv = document.getElementById('predictionResult');// display prediction
             resultDiv.style.display = 'block'; // Show the result
-            // Update the innerText based on your API's actual response keys
             resultDiv.innerText = 
                 // `Survival Probability (Decision Tree): ${result['DT Probability']}\n` +
                 `Survival Prediction: ${result['LogReg Probability']}`;
