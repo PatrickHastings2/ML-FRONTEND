@@ -8,15 +8,12 @@ type: hacks
 ---
 
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Titanic Survival Prediction</title>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -80,10 +77,6 @@ type: hacks
         }
     </style>
 </head>
-</html>
-
-
-</head>
 <body>
     <div class="container">
         <h2>Titanic Survival Predictor</h2>
@@ -144,8 +137,8 @@ type: hacks
             resultDiv.style.display = 'block'; // Show the result
             // Update the innerText based on your API's actual response keys
             resultDiv.innerText = 
-                <!-- `DecisionTreeClassifier Survival Probability: ${result['DecisionTreeClassifier Survival Probability']}\n` + -->
-                `Survival Probability: ${result['LogisticRegression Survival Probability']}%`;
+                // `Survival Probability (Decision Tree): ${result['DT Probability']}\n` +
+                `Survival Prediction: ${result['LogReg Probability']}`;
         };
     </script>
 </body>
