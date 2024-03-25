@@ -13,65 +13,89 @@ type: hacks
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Titanic Survival Prediction</title>
-<style>
-    body {
-        font-family: 'Arial', sans-serif;
-        background-color: #F5F5DC; /* Beige background */
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-    .container {
-        background-color: #293445;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        width: 300px;
-    }
-    h2 {
-        text-align: center;
-        color: #050805;
-    }
-    form {
-        display: flex;
-        flex-direction: column;
-    }
-    label {
-        margin-top: 10px;
-    }
-    input, select, button {
-        padding: 10px;
-        margin-top: 5px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        /* Ensure text color is black for better contrast */
-        color: #050805;
-    }
-    input::placeholder {
-        /* Change placeholder text to black */
-        color: #050805; 
-        opacity: 1; /* Full opacity */
-    }
-    button {
-        background-color: #050805;
-        color: white;
-        margin-top: 20px;
-    }
-    button:hover {
-        background-color: #4cae4c;
-    }
-    #predictionResult {
-        margin-top: 20px;
-        text-align: center;
-        padding: 10px;
-        background-color: #000000;
-        border-radius: 4px;
-        display: none; /* Hide initially */
-    }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0; /* light Grey */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #ffffff; /* white */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            color: #333333; /* contrasting text color */
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            color: #333333; /* contrasting text color */
+        }
+        input, select, button {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #dddddd; /* grey border */
+            border-radius: 4px;
+            /* contrasting text color */
+            color: #333333; /* contrasting text color*/
+        }
+        input::placeholder {
+            color: #aaaaaa; 
+            opacity: 1; 
+        }
+        button {
+            background-color: #008080; /* teal button */
+            color: white;
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005454; /* contrasting teal */
+        }
+        #predictionResult {
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px;
+            background-color: #dddddd; /* dark grey */
+            border-radius: 4px;
+            display: none; /* initially hide */
+            color: #333333; /* Dark gray text */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Modified UI</h2>
+    <form>
+        <label for="inputData">Input Data:</label>
+        <input type="text" id="inputData" placeholder="Enter data...">
+        <button type="submit">Submit</button>
+    </form>
+    <div id="predictionResult">Prediction Result: <span id="resultValue"></span></div>
+</div>
+
+</body>
+</html>
+
 
 </head>
 <body>
