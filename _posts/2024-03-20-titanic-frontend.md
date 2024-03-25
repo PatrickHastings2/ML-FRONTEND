@@ -1,5 +1,5 @@
 ---
-toc: true
+toc: false
 comments: false
 layout: post
 title: Titanic ML
@@ -13,7 +13,6 @@ type: hacks
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Titanic Survival Prediction</title>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -81,19 +80,6 @@ type: hacks
         }
     </style>
 </head>
-<body>
-
-<div class="container">
-    <h2>Modified UI</h2>
-    <form>
-        <label for="inputData">Input Data:</label>
-        <input type="text" id="inputData" placeholder="Enter data...">
-        <button type="submit">Submit</button>
-    </form>
-    <div id="predictionResult">Prediction Result: <span id="resultValue"></span></div>
-</div>
-
-</body>
 </html>
 
 
